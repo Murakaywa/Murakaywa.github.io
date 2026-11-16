@@ -689,3 +689,166 @@ section{ padding-block: 88px; }
   section{ padding-block: 56px; }
   .footer-grid{ flex-direction: column; }
 }
+
+/* ============================================================
+   ADDITIONS — merged Work pages (Design & Systems, Digital
+   Skills, Coding)
+   ============================================================ */
+
+html{ scroll-padding-top: 90px; }
+
+/* In-page jump links */
+.jump-nav{
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-top: 26px;
+}
+.jump-nav a{
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 18px;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.jump-nav a:hover{ border-color: var(--orange); color: var(--gold); transform: translateY(-2px); }
+
+/* Hub tile colours for the new three areas */
+.hub-tile.t-skills{ background: linear-gradient(155deg, rgba(20,184,166,0.16), var(--bg-soft) 60%); }
+.hub-tile.t-skills .tile-tag{ color: var(--teal); }
+.hub-tile.t-code{ background: linear-gradient(155deg, rgba(139,92,246,0.18), var(--bg-soft) 60%); }
+.hub-tile.t-code .tile-tag{ color: var(--purple); }
+
+/* ============ SKILL CARDS (Digital Skills page) ============ */
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.skill-card{
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 28px 26px 30px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.skill-card:hover{ transform: translateY(-5px); border-color: var(--teal); }
+.skill-card .num{ font-size: 0.75rem; color: var(--teal); }
+.skill-card h3{
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  margin: 12px 0 10px;
+  letter-spacing: 0.01em;
+}
+.skill-card p{ color: var(--paper-dim); font-size: 0.97rem; margin: 0; }
+.skill-card.programme{
+  border: 1.5px dashed var(--line);
+  border-top: 1.5px dashed var(--line);
+  background: transparent;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.skill-card.programme:hover{ transform: none; border-color: var(--line); }
+.skill-card.programme h3{ color: var(--gold); }
+
+.cta-row{ margin-top: 48px; display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* ============ LANGUAGE CARDS (Coding page) ============ */
+.lang-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.lang-card{
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.lang-card:hover{ transform: translateY(-5px); border-color: var(--purple); }
+.lang-card .demo{
+  padding: 22px;
+  background: #09080c;
+  border-bottom: 1px solid var(--line);
+  min-height: 168px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  white-space: pre;
+}
+.lang-card .demo .k{ color: #c4a8ff; }
+.lang-card .demo .s{ color: var(--gold); }
+.lang-card .demo .t{ color: #5ee0d0; }
+.lang-card .demo .c{ color: #7d7a86; }
+.lang-card .body{ padding: 24px 26px 28px; }
+.lang-card .tag{ font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--purple); }
+.lang-card h3{ font-size: 1.4rem; text-transform: uppercase; margin: 8px 0 8px; }
+.lang-card p{ color: var(--paper-dim); font-size: 0.96rem; margin: 0; }
+
+/* Scratch-style blocks (CSS-only illustration) */
+.scratch{ white-space: normal; }
+.sb{
+  display: block; width: max-content;
+  padding: 7px 14px;
+  border-radius: 6px;
+  color: #fff;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 0.82rem; font-weight: 600;
+  margin-bottom: 3px;
+}
+.sb.hat{ background: #ffab19; color: #3b2a00; border-radius: 18px 18px 6px 6px; padding-top: 10px; }
+.sb.looks{ background: #9966ff; }
+.sb.motion{ background: #4c97ff; }
+
+/* ============ MSIMBO KIDS FEATURE ============ */
+.channel{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+.channel h2{
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-transform: uppercase;
+  margin: 14px 0 16px;
+  line-height: 1.02;
+}
+.channel p{ color: var(--paper-dim); font-size: 1.05rem; }
+.channel .points{ list-style: none; padding: 0; margin: 22px 0 30px; }
+.channel .points li{
+  padding: 10px 0 10px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+  color: var(--paper-dim);
+}
+.channel .points li::before{
+  content: ""; position: absolute; left: 4px; top: 19px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--purple);
+}
+.video-card{
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius);
+  background: linear-gradient(140deg, #3b1d8f, #8b5cf6 55%, #ec4899);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px;
+  transform: rotate(2deg);
+}
+.video-card .play{
+  width: 72px; height: 72px; border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  display: flex; align-items: center; justify-content: center;
+}
+.video-card .play svg{ width: 28px; height: 28px; fill: #3b1d8f; margin-left: 4px; }
+.video-card .name{
+  font-size: 1.6rem; text-transform: uppercase; letter-spacing: 0.04em; color: #fff;
+}
+
+/* ============ RESPONSIVE (additions) ============ */
+@media (max-width: 900px){
+  .skills-grid, .lang-grid{ grid-template-columns: 1fr; }
+  .channel{ grid-template-columns: 1fr; }
+}
